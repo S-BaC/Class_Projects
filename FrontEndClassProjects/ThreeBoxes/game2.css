@@ -1,0 +1,117 @@
+*{
+    font-size: 1.1rem;
+    font-family: "Trebuchet";
+}
+
+body{
+    margin:0;
+    width: 100%;
+    background-image: url("bgi03.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* #title{
+    text-align: center;
+    font-size: larger;
+    color: rgb(2, 2, 70);
+} */
+
+#difSetting{
+    background-color: aquamarine;
+    width: 100%;
+    padding:5px 0px 5px 0px;
+    text-align: center;
+    margin-top:15px;
+    color:brown;
+}
+
+#difficulty{
+    color:brown;
+}
+
+#startBtn, #stopBtn{
+    height:30px;
+    border:none;
+    border:2px;
+    border-radius:10px;
+    width:150px;
+    margin:10px;
+    color:white;
+}
+
+.startBtn{
+    background-color: rgb(22, 165, 22);
+}
+
+.stopBtn{
+    background-color: rgb(182, 22, 22);
+    
+}
+
+.changedBtn{
+    background-color: gray;
+}
+
+#heading{
+    width: 100%;
+    display:flex;
+    justify-content: center;
+}
+
+#scoreM, #timeM{
+    width:250px;
+    margin: 10px;
+    padding:70px;
+}
+
+#questionM{
+    display:flex;
+    justify-content: center;
+}
+
+#question{
+    width:150px;
+    height:36px;
+    border: 1px solid;
+    border-color: rgb(22, 165, 22);
+    font-size:30px;
+    padding: 5px 50px 5px 50px;
+
+}
+
+#choicesM{
+    display:flex;
+    justify-content: center;
+}
+
+.choiceBox{
+    padding:10px;
+    margin:20px;
+    background-color: rgb(56, 56, 207);
+    color:white;
+    border:none;
+    border:2px;
+    border-radius: 20px;
+    width:200px;
+    height:200px;
+    text-align: center;
+    line-height: 180px;
+    font-size: 30px;
+}
+
+#stopM{
+
+    display:flex;
+    justify-content: center;
+
+}
+
+#history{
+    margin-left:180px;
+    padding:10px;
+    width:1000px;
+    display:flex;
+    justify-content: left;
+
+}

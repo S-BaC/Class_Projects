@@ -1,0 +1,83 @@
+<!-- Test your mental arithmatics by choosing the correct box. -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> GAME 2 </title>
+        <link rel="stylesheet" href="game2.css">
+        <script type="text/javascript" src="game2.js"></script>
+    </head>
+    <body>
+        <div id="topBar">
+            <!-- <h1 id="title"> ~ Howdy ~ </h1> -->
+            <div id="difSetting">
+                Select your level:
+                <select name="difficulty" id="difficulty">
+                    <option value="1"> Easy </option>
+                    <option value="2"> Medium </option>
+                    <option value="3"> Hard </option>
+                </select>
+            </div>
+        </div>
+
+        <table id="heading">
+            <tr>
+                <td class="header">
+                    <span id="scoreM"> 
+                        Scores: 
+                        <span id="score">0</span>
+                    </span>
+                </td>
+                <td class="header">
+                    <button id="startBtn" class="startBtn" onclick="startButton()">
+                        <b>Start</b>
+                    </button>
+                </td>
+                <td class="header">
+                    <span id="timeM">
+                        Time:
+                        <span id="time">0</span>
+                    </span>
+                </td>
+            </tr>
+        </table>
+
+        <div id="questionM">
+            <span id="question"></span>
+        </div>      
+
+        <div id="choicesM">
+            <button id="choices0" class="choiceBox" onclick="chose(0)" disabled></button>
+            <button id="choices1" class="choiceBox" onclick="chose(1)" disabled></button>
+            <button id="choices2" class="choiceBox" onclick="chose(2)" disabled></button>
+        </div>
+
+        <div id="stopM">
+            <button id="stopBtn" class="changedBtn" onclick="stopButton()" disabled>
+                <b>Stop</b>
+            </button>
+        </div>
+
+        <span id="history">
+            <h3>Result</h3>
+            <p id="record"></p>
+        </span>
+
+        <audio id="startSound">
+            <source src="btnclick.mp3">
+        </audio>
+        <audio id="stopSound">
+            <source src="click.wav">
+        </audio>
+        <audio id="correctSound">
+            <source src="correct.wav">
+        </audio>
+        <audio id="wrongSound">
+            <source src="wrong.wav">
+        </audio>
+        <audio id="badScore">
+            <source src="badScore.wav">
+        </audio>
+        <audio id="goodScore" src="goodScore.wav"></audio>
+    </body>
+</html>

@@ -1,0 +1,131 @@
+<!-- Classic MineSweeper game on 6x6 squares. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="game3.css">
+    <script defer type="text/javascript" src="game3.js"></script>
+    <title>Game 3</title>
+</head>
+<body>
+    <div id="heading">
+        <h1> Sweep'em Mines &#9889 </h1>
+    </div>
+    <table id="table">
+        <tr>
+            <td id="11" class="tableCell" onclick="pressed(this)"></td>
+            <td id="12" class="tableCell" onclick="pressed(this)"></td>
+            <td id="13" class="tableCell" onclick="pressed(this)"></td>
+            <td id="14" class="tableCell" onclick="pressed(this)"></td>
+            <td id="15" class="tableCell" onclick="pressed(this)"></td>
+            <td id="16" class="tableCell" onclick="pressed(this)"></td>
+        </tr>
+        <tr>
+            <td id="21" class="tableCell" onclick="pressed(this)"></td>
+            <td id="22" class="tableCell" onclick="pressed(this)"></td>
+            <td id="23" class="tableCell" onclick="pressed(this)"></td>
+            <td id="24" class="tableCell" onclick="pressed(this)"></td>
+            <td id="25" class="tableCell" onclick="pressed(this)"></td>
+            <td id="26" class="tableCell" onclick="pressed(this)"></td>
+        </tr>
+        <tr>
+            <td id="31" class="tableCell" onclick="pressed(this)"></td>
+            <td id="32" class="tableCell" onclick="pressed(this)"></td>
+            <td id="33" class="tableCell" onclick="pressed(this)"></td>
+            <td id="34" class="tableCell" onclick="pressed(this)"></td>
+            <td id="35" class="tableCell" onclick="pressed(this)"></td>
+            <td id="36" class="tableCell" onclick="pressed(this)"></td>
+        </tr>
+        <tr>
+            <td id="41" class="tableCell" onclick="pressed(this)"></td>
+            <td id="42" class="tableCell" onclick="pressed(this)"></td>
+            <td id="43" class="tableCell" onclick="pressed(this)"></td>
+            <td id="44" class="tableCell" onclick="pressed(this)"></td>
+            <td id="45" class="tableCell" onclick="pressed(this)"></td>
+            <td id="46" class="tableCell" onclick="pressed(this)"></td>
+        </tr>
+        <tr>
+            <td id="51" class="tableCell" onclick="pressed(this)"></td>
+            <td id="52" class="tableCell" onclick="pressed(this)"></td>
+            <td id="53" class="tableCell" onclick="pressed(this)"></td>
+            <td id="54" class="tableCell" onclick="pressed(this)"></td>
+            <td id="55" class="tableCell" onclick="pressed(this)"></td>
+            <td id="56" class="tableCell" onclick="pressed(this)"></td>
+        </tr>
+        <tr>
+            <td id="61" class="tableCell" onclick="pressed(this)"></td>
+            <td id="62" class="tableCell" onclick="pressed(this)"></td>
+            <td id="63" class="tableCell" onclick="pressed(this)"></td>
+            <td id="64" class="tableCell" onclick="pressed(this)"></td>
+            <td id="65" class="tableCell" onclick="pressed(this)"></td>
+            <td id="66" class="tableCell" onclick="pressed(this)"></td>
+        </tr>
+    </table>
+
+    <table id="hTable">
+        <tr>
+            <td id="h11" class="hTableCell"></td>
+            <td id="h12" class="hTableCell"></td>
+            <td id="h13" class="hTableCell"></td>
+            <td id="h14" class="hTableCell"></td>
+            <td id="h15" class="hTableCell"></td>
+            <td id="h16" class="hTableCell"></td>
+        </tr>
+        <tr>
+            <td id="h21" class="hTableCell"></td>
+            <td id="h22" class="hTableCell"></td>
+            <td id="h23" class="hTableCell"></td>
+            <td id="h24" class="hTableCell"></td>
+            <td id="h25" class="hTableCell"></td>
+            <td id="h26" class="hTableCell"></td>
+        </tr>
+        <tr>
+            <td id="h31" class="hTableCell"></td>
+            <td id="h32" class="hTableCell"></td>
+            <td id="h33" class="hTableCell"></td>
+            <td id="h34" class="hTableCell"></td>
+            <td id="h35" class="hTableCell"></td>
+            <td id="h36" class="hTableCell"></td>
+        </tr>
+        <tr>
+            <td id="h41" class="hTableCell"></td>
+            <td id="h42" class="hTableCell"></td>
+            <td id="h43" class="hTableCell"></td>
+            <td id="h44" class="hTableCell"></td>
+            <td id="h45" class="hTableCell"></td>
+            <td id="h46" class="hTableCell"></td>
+        </tr>
+        <tr>
+            <td id="h51" class="hTableCell"></td>
+            <td id="h52" class="hTableCell"></td>
+            <td id="h53" class="hTableCell"></td>
+            <td id="h54" class="hTableCell"></td>
+            <td id="h55" class="hTableCell"></td>
+            <td id="h56" class="hTableCell"></td>
+        </tr>
+        <tr>
+            <td id="h61" class="hTableCell"></td>
+            <td id="h62" class="hTableCell"></td>
+            <td id="h63" class="hTableCell"></td>
+            <td id="h64" class="hTableCell"></td>
+            <td id="h65" class="hTableCell"></td>
+            <td id="h66" class="hTableCell"></td>
+        </tr>
+    </table>
+    <audio id="clickSound">
+        <source src="btnclick.mp3">
+    </audio>
+    <audio id="loseSound">
+        <source src="gameover.mp3">
+    </audio>
+    <audio id="winSound">
+        <source src="win.wav">
+    </audio>
+    <audio id="clickBrownSound">
+        <source src="click.wav">
+    </audio>
+</body>
+</html>

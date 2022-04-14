@@ -1,0 +1,220 @@
+*{
+    animation-iteration-count: infinite;
+    color:white;
+    font-family: Calibri;
+}
+
+body{
+    background-image: url("underwater.jpeg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
+
+/* STATIC OBJECTS */
+.logo{
+    width:75px;
+    height:75px;
+    border-radius: 50%;
+    position:absolute;
+    left:15px;
+    top:15px;
+}
+.text{
+    width:700px;
+    height:auto;
+    margin:100px;
+    text-shadow: 1px 1px 1px aquamarine;
+}
+.text>h1{
+    font-size: 100px;
+}
+.coral{
+    width:600px;
+    position: absolute;
+    bottom:0px;
+    right:0px;
+}
+.btn{
+    text-align: center;
+    border: 2px solid white;
+    background: transparent;
+    font-size: larger;
+}
+.playBtn{
+    margin-top:20px;
+    width:300px;
+    text-shadow:none;
+    border-radius: 30px;
+}
+.loginBtn{
+    width:150px;
+    height:50px;
+    position: absolute;
+    top:25px;
+    right:25px;
+    border-radius: 20px;
+    line-height: 0px;
+}
+
+
+/* FISH AND ANIMATION */
+.fish{
+    position: absolute;
+    width:70px;
+    animation-duration: 12s;
+    animation-timing-function: linear;
+}
+
+#f101{
+    top:10px;
+    right:0px;
+    visibility: hidden;
+    animation-name: f101Movement;
+    animation-delay: 1s;
+}
+#f102{
+    top:500px;
+    right:5px;
+    transform: rotate(10deg);
+    visibility: hidden;
+    animation-name: f102Movement;
+    animation-delay: 3s;
+    animation-duration: 10s;
+   
+}
+#f103{
+    top:30px;
+    left:0px;
+    transform: rotateY(180deg);
+    visibility: hidden;
+    animation-name: f103Movement;
+    animation-delay: 0.5s;
+    animation-duration: 12s;
+}
+#f201{
+    bottom:15px;
+    right:150px;
+    transform: rotate(35deg);
+    animation-name: f201Movement;
+    visibility: hidden;
+    animation-delay: 3;
+    animation-duration: 7s;
+    transition: ease-in;
+}
+#f202{
+    width:60px;
+    top:10px;
+    left:500px;
+    transform:rotateY(180deg) rotate(-20deg);
+    animation-name: f202Movement;
+    animation-delay: 0s;
+    animation-duration: 20s;
+}
+#f203{
+    width:80px;
+    top:300px;
+    left:100px;
+    transform:rotateY(180deg) rotate(-10deg);
+    visibility: hidden;
+    animation-name: f203Movement;
+    animation-delay: 6s;
+    animation-duration: 9s;
+}
+
+@keyframes f101Movement {
+    0%{top:10px; right:0px;visibility: visible;}
+    12.5%{top:20px; right:100px;}
+    25%{top:50px; right:500px; transform:rotate(-10deg);}
+    37.5%{top:150px; right:600px;}
+    50%, 100%{top:50px; right:1250px;transform: rotate(20deg); visibility:hidden;}
+}
+
+@keyframes f102Movement{
+    0%{top:500px; right:5px;visibility: visible;}
+    12.5%{top:300px; right:200px;transform:rotate(-10deg);}
+    25%{top:350px; right:500px; }
+    37.5%{top:420px; right:900px;}
+    50%, 100%{top:300px; right:1250px;transform: rotate(10deg); visibility:hidden;}
+}
+
+@keyframes f103Movement{
+    0%{top:30px; left:0px;visibility: visible;}
+    12.5%{top:100px; left:100px;transform: rotateY(180deg) rotate(-10deg);}
+    25%{top:250px; left:300px;}
+    37.5%{top:500px; left:600px; }
+    50%, 100%{top:300px; left:1250px;transform: rotateY(180deg) rotate(20deg); visibility:hidden;}
+} 
+
+@keyframes f201Movement {
+    0%{bottom:15px; right:150px;visibility: visible;}
+    25%{bottom:200px; right:500px;}
+    50%, 100%{bottom:11px; right:1000px;transform:rotate(-20deg);visibility:hidden;}
+}
+
+@keyframes f202Movement {
+    0%{top:10px; left:500px;visibility: visible;}
+    6.25%{top:200px; left:700px;}
+    13.2%{top:350px; left:1200px; }
+    25%{top:500px; left:1250px;}
+    31.25%{top:450px; left:700px; }
+    37.5%{top:300px; left:500px;transform:rotate(15deg);}
+    43.75%{top:350px; left:200px; transform:rotate(-15deg);}
+    50%{top:500px;left:100px;transform:rotate(-25deg);}
+    55%,100%{top:550px;left:0px;  visibility:hidden;}
+}
+
+@keyframes f203Movement {
+    0%{top:300px; left:100px; visibility: visible;}
+    12.5%{top:350px; left:200px;}
+    25%{top:400px; left:300px; transform:rotateY(180deg) rotate(10deg);}
+    37.5%{top:200px; left:600px;}
+    50%, 100%{top:10px; left:1000px; visibility:hidden;}
+}
+
+/* BUBBLES AND ANIMATION */
+.bubbles{
+    position:absolute;
+    bottom:0px;
+    width:50px;
+    opacity: 0;
+    animation-name: bubbleMovement;
+    animation-duration: 6s;
+}
+
+.b1{
+    left:100px;
+    animation-delay: 1s;
+}
+
+.b2{
+    left:300px;
+    animation-delay: 3.5s;
+}
+
+.b3{
+    left: 500px;
+    animation-delay: 2s;
+}
+
+.b4{
+    right:500px;
+    animation-delay: 1.5s;
+}
+
+.b5{
+    right:100px;
+    animation-delay: 4.5s;
+}
+
+@keyframes bubbleMovement{
+    0%{
+        bottom:0px;
+        opacity: 100%;
+    }
+    100%{
+        opacity: 0%;
+        bottom:1000px;
+    }
+}
