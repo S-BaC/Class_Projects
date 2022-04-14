@@ -1,2 +1,2 @@
-# Mini-projects written while learning basics.
-For Class Projects
+# Thanks for checking out!
+This repo is for mini-projects written while learning the basics.
