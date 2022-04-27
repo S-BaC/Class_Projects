@@ -8,25 +8,31 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="screen">
+        <h1>Many Thanks!</h1>
+        <p><em>We will contact you (with splendid news) soon </em> &#128521; </p>
+    </div>
     <div class="wrapper">
         <div class="txt">
             <h1> Ready for the long march? </h1>
             <p>This is not an actual service, yet. Anyway, just sign up, please.</p>
             <p>No regrets, that's for sure.</p>
         </div>
-        <form action="">
+        <form action="submit">
             <div class="i">
             <label for="fName" >FIRST NAME* </label>
-            <input type="text" name="fName" required/>
+            <input type="text" name="fName" 
+            pattern="(^[A-Za-z]*$)" title="Please enter a valid name." required/>
             </div>
-            
             <div class="i">
             <label for="lName">LAST NAME</label>
-            <input type="text" name="lName"/>
+            <input type="text" name="lName" 
+            pattern="(^[A-Za-z]*$)" title="Please enter a valid name."/>
             </div>  
             <div class="i">
             <label for="email" >EMAIL* </label>
-            <input type="text" name="email" required/>
+            <input type="email" name="email" 
+            title="e.g. abc@gmail.com" required/>
             </div>
             <div class="i">
             <label for="dob">DATE OF BIRTH</label>
@@ -34,24 +40,40 @@
             </div>
             <div class="i">
             <label for="password" >PASSWORD*</label>
-            <input type="password" name="password" required/>
+            <input type="password" name="password" placeholder=" "
+            pattern="(^[A-Za-z0-9]*$)" minlength="6" title="Must be A-Z, a-z, 0-9. At least 6 characters." required/>
             </div>
             <div class="i">
             <label for="cPassword">CONFIRM PASSWORD*</label>
-            <input type="password" name="cPassword" required/>
+            <input type="password" name="cPassword" placeholder="Will reload the whold page if not matching."
+            pattern="(^[A-Za-z0-9]*$)" title="Passwords not matching." required/>
             </div>
-            
-            <div class="tnc">
-            <input type="checkbox" name="tnc" required/>
-            <label for="tnc">Terms and Conditions</label>
+            <div class="i">
+                <div class="tnc">
+                <input type="checkbox" name="tnc" required/>
+                <label for="tnc">Terms and Conditions</label>
+                </div>  
+                <button name="submit"> CREATE ACCOUNT </button>
             </div>
-
-            
-        </form>
-        <div class="ps">
-            <button name="submit"> CREATE ACCOUNT </button>
+            <div class="i">
+                <div class="ps">
             <p> Already have an account? <a>Log In</a></p>
-        </div>
+            </div>
+            </div>
+        </form>
     </div>
+    <script>
+        const form = document.querySelector('form');
+        form.addEventListener('submit',e=>{
+            if(document.querySelector('input[name=password]').value
+                !== document.querySelector('input[name=cPassword]').value){
+                    alert("Passwords not matching.");
+                    location.reload();
+                }
+            e.preventDefault();
+            document.querySelector('.wrapper').style.display='none';
+            document.querySelector('.screen').style.display='block';
+            })
+    </script>
 </body>
 </html>
