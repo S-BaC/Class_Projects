@@ -1,0 +1,38 @@
+:root{
+    --color1: #c29467;
+    --color2:teal;
+    --color3:orangered;
+}
+
+body{
+    background-color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2vmax;
+    text-align: center;
+    padding-top:2vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.flexbox{display:flex;}
+
+.turn{color:orangered; font-weight: bolder;}
+#board{
+    padding:1vh;
+    background-color: var(--color1);
+    width:auto;
+    flex: 1 0 auto;
+    align-items: center;
+    display:flex;
+    flex-direction: column;
+    border-radius: 10%;
+}
+.row{}
+.circle{
+    margin:1vmax;
+    width:5vmax;height:5vmax;
+    border-radius: 50%;
+    background-color: white;
+}

@@ -1,0 +1,63 @@
+:root{
+    --primaryColor:#0B48E3;
+    --secondaryColor:#E3A40B;
+    --accent1:#E34522;
+    --accent2:#97E322;
+    --accent3:#0938B0;
+}
+body{
+    display:grid;
+    grid-template-columns: 1fr 5fr;
+
+    background-color: gray;
+    margin:0;padding:0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.nav{
+    grid-column: 1/2;
+    background-color:#333;
+}
+.content{
+    grid-column: 2/3;
+    background-color: white;
+    display:grid;
+    grid-template-rows: 1fr 6fr;
+}
+.header{
+    grid-row:1/2;
+    background-color: var(--primaryColor);
+}
+.body{
+    grid-row: 2/6;
+    display:grid;
+    grid-template-columns: 3fr 1fr;
+}
+.projects{
+    padding:1vw;
+    display:grid; gap:1vw;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 25px auto auto;
+}
+.projects h3{grid-column: 1/4; padding:0; margin:0;}
+.projCard, .noti1Content, .noti2Content{
+    padding: 1vw 2vw;
+    background-color: whitesmoke;
+    box-shadow: 0px 0px 10px gray;
+
+}
+.notifications{padding:1vw;
+    display:grid; gap:1vw;
+    grid-template-rows: 3fr 2fr;
+}
+
+.noti1, .noti2{
+    display:grid; gap:1vw;
+    grid-template-rows: 25px auto;
+}
+.noti1 h3, .noti2 h3{padding:0;margin:0;}
+
+.noti1Box, .noti2Box{
+    border-top: 1px solid rgba(128, 128, 128, 0.267);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.267);
+}
+
