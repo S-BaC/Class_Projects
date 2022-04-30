@@ -151,8 +151,11 @@ function play(row,column){
     clickedSounds[turn].play();
     circleArr[row][column] = turn;
         filledSlots ++;
-        //Checking if anybody wins:
-        if(filledSlots >= (2*winningPoints-1)){
+        //Checking if anybody wins, or if it's a draw:
+        if(filledSlots === boardSize**2){
+            draw();
+        }
+        else if(filledSlots >= (2*winningPoints-1)){
             checkStatus();
             }
         turn = 1 - turn; //Toggling player numbers.
@@ -284,7 +287,14 @@ function win(winnerIndex){
     document.getElementsByClassName('turn')[0].style.backgroundColor = dotColors[winnerIndex];
     document.getElementsByClassName('credit')[0].style.display = 'block';
 }
-
+function draw(){    
+    turns.style.display = 'none';
+    board.style.display = 'none';
+    welcomeScr.innerHTML = "<p text-align='center'> It's a draw! <br> Congratualations to you both. </p>";
+    welcomeScr.style.display = 'block';
+    welcomeScr.style.color='var(--color7)';
+    document.getElementsByClassName('turn')[0].style.backgroundColor = '#eee';
+}
 
 /*------------------------------------------------------------------------------------------------
 //Figure out how to make a function for checing Hor/Ver ?
