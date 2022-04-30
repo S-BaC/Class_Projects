@@ -1,7 +1,5 @@
-let circleArr = [
-    [1,2,3],
-    [3,4,5]
-];
+arr = [1,1,3,2,2,4,3,5,6];
 
-circleArr[1][2] = 6;
-console.log(circleArr[1][2]);
+arr.forEach(element => {
+   console.log(element); 
+});

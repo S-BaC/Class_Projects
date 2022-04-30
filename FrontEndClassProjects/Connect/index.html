@@ -8,11 +8,95 @@
     <script defer src="script.js"></script>
 </head>
 <body>
-    <div class="turn">
-        <p>Player <span id="player">1</span>'s Turn ~ </p>
+    <div class="nav flexbox">
+        <div id="title">
+            <h1>Connect Fast</h1>
+        </div>
+        <form class="flexbox" id="settings">
+            <div class="navBtns flexbox">
+                <button class="startBtn" onclick="startGame()"> START </button>
+                <button class="resetBtn" onclick="location.reload()"> RESET </button>
+            </div>
+            <label> Player Names</label>
+            <input type="text" id="p1Name" name="p1Name" placeholder="Player 1" value="Player 1"/>
+            <input type="text" id="p2Name" name="p2Name" value="Player 2"/>
+        <!-- <div id="color">
+            <label>Colors</label>
+            <button id="boardColor"> Board </button>
+            <button id="p1Color">Player 1</button>
+            <button id="p2Color">Player 2</button>
+        </div> -->
+            <label for="boardSize">Board & Rules</label>
+            <div class="selectTagsWrapper flexbox">
+                <select id="boardSize" name="boardSize">
+                    <option value="2"> 2 x 2 Size </option>
+                    <option value="3"> 3 x 3 Size </option>
+                <option selected value="4">4 x 4 Size</option>
+                    <option value="5"> 5 x 5 Size </option>
+                    <option value="6"> 6 x 6 Size </option>
+                    <option value="7"> 7 x 7 Size </option>
+                    <option value="8"> 8 x 8 Size </option>
+                    <option value="9"> 9 x 9 Size </option>
+                </select>
+                <select id="winningPoint" name="winningPoint">
+                    <option value="2"> 2 Dots </option>
+                    <option value="3"> 2 Dots </option>
+                <option selected value="4"> 4 Dots </option>
+                    <option value="5"> 5 Dots </option>
+                    <option value="6"> 6 Dots </option>
+                    <option value="7"> 7 Dots </option>
+                    <option value="8"> 8 Dots </option>
+                    <option value="9"> 9 Dots </option>
+                </select>
+            </div>
+            <label for="mode"> Mode </label>
+            <div class=" radios flexbox">
+                <div class="flexbox radioWrapper">
+                    <input type="radio" id="pvp" value="pvp" name="mode" onclick="vsMode(1)" checked/>
+                    <label for="pvp"> Multiplayer </label>
+                </div>
+                <div class="flexbox radioWrapper">
+                    <input type="radio" id="vsComp" value="vsComp" name="mode" onclick="vsMode(0)"/>
+                    <label for="vsComp"> vs. Computer </label>
+                </div>
+            </div>
+            <div class=" radios flexbox compDifficulty">
+                <label for="difficulty">Opponent</label>
+                <div class="flexbox radioWrapper">
+                    <input type="radio" id="easy" value="easy" name="difficulty" checked/>
+                    <label for="easy"> Steve </label>
+                </div>
+                <div class="flexbox radioWrapper">
+                    <input type="radio" id="normal" value="normal" name="difficulty"/>
+                    <label for="normal"> Marc </label>
+                </div>
+            </div>
+        </form>            
+        <div class="about">
+            <a><em>about</em></a>
+        </div>
     </div>
-    <div id="board">
-        <!-- Circles inserted through Javasript-->
+    
+    <div class="boardWrapper flexbox">
+        <div class="turn">
+            <p class="welcome">Welcome, stranger</p>
+            <p class="turns"><span id="playerTurn">First Player</span>'s Turn </p>
+        </div>
+        <div id="board" class="flexbox">
+            <!-- Circles inserted through Javasript-->
+        </div>
+    </div>  
+
+    <audio id="startSound" src="audio/start.wav"></audio>
+    <audio id="resetSound" src="audio/reset.wav"></audio>
+    <audio id="winSound" src="audio/win.wav"></audio>
+    <audio id="clickedSound1" src="audio/click1.wav"></audio>
+    <audio id="clickedSound2" src="audio/click2.wav"></audio>
+    <audio id="clickedSound3" src="audio/click3.wav"></audio>
+
+    <div class="credit">
+        <a href="https://www.flaticon.com/free-icons/quality" title="quality icons">Quality icons created by Vectors Market - Flaticon</a>
     </div>
+
 </body>
 </html>
