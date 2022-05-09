@@ -1,0 +1,133 @@
+:root{
+    --usafa-blue: #26547cff;;
+    --paradise-pink: #ef476fff;
+    --orange-yellow-crayola: #ffd166ff;
+    --caribbean-green: #06d6a0ff;
+    --white: #fcfcfcff;
+    --black: #333;
+}
+
+body{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:3vw;
+    background-color: #ffd166ff;
+    font-family: Verdana, sans-serif;
+}
+
+/*LOGO*/
+.logo{
+    position: absolute;
+    top:3vh;left:3vh;
+}
+.logo img{
+    width: 10vw;
+    max-width:100px;
+    
+}
+
+/*WELCOMESCR*/
+.welcomeScr{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:50vw;
+    margin-top:20vh;
+    padding:2vmax;
+    border-radius: 3vmin;
+    border: 1vmin solid #26547cff;
+    box-shadow: 0px 0px 15px #555;
+    text-align: center;
+}
+.welcomeScr button{
+    width:10vw;
+    margin:auto;
+    background-color: #26547cff;
+    border:none;
+    padding:1.5vmin;
+    color:#fcfcfc;
+    cursor:pointer;
+}
+
+
+/*GAMESCR*/
+
+#display{
+    margin-top: 10vw;
+    text-align: center;
+    letter-spacing: 2vw;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display:flex;
+    justify-content: center;
+    font-family: serif;
+}
+#inputKeys input{
+    width:5vw;
+    height:5vw;
+    margin:1vh;
+    border:none;
+    background-color: #ffd166ff;
+    color:#26547cff;
+    font-weight: bold;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 1px 2px 3px black;
+    font-size: 2rem;
+    font-family: serif;
+    
+}
+#inputKeysClock{
+    font-size: 1.2rem;
+    font-weight:600;
+    display:block;
+    margin:auto;
+    margin-top: 3vw;
+    text-align: center;
+    width:50%;
+    padding:1vh;
+    box-shadow: 1px 2px 3px black;
+    background-color: #ffd166ff;
+    color:#26547cff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#result{
+    text-align: center;
+    margin:auto;
+    font-weight: bold;
+    font-family: Courier, monospace;
+    border-bottom: 0.3vmin solid #06d6a0ff ;
+}
+#result button{
+    background-color: #26547cff;
+    padding:1vmin;
+    color:#fcfcfc;
+    border:none;
+    border-radius: 1vmin;
+    cursor:pointer;
+}
+.keys{
+    display: grid;
+    grid-template-columns: repeat(10,clamp(7vh,8vh,10vh));
+    grid-row: repeat(4,auto);
+    row-gap: 1.5vh;
+}
+.key{
+    width:7vh;
+    height:7vh;
+    text-align: center;
+    line-height: 7vh;
+    background-color: #fcfcfc;
+    color:#333;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 1px 2px 3px #333;
+    cursor:no-drop;
+}
+
+
+.gameScr{display:none;}

@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Stuff</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery.js"></script>
+    <script defer src="app.js"></script>
+</head>
+<body>
+    <div class="logo" onclick="location.reload()">
+        <img src="keyboard-key.png" alt="">
+    </div>
+    <div class="welcomeScr">
+        <h1>Welcome!</h1>
+        <p>
+            This is a simple typewriter game, <br> where you'll be given a set of random characters.
+            <br><br>See how much you can score before making your first mistake!
+            <br><br>
+            <em>Also, there is no backspace, so good luck!</em>
+        <p>
+        <button onclick="start()">Start</button>
+    </div>
+    <div class="scr gameScr">
+        <div id="display">
+        </div>
+        <div class="keysIn">
+            <form action="" id="inputKeys"></form>
+            <div id="inputKeysClock"></div>
+        </div>
+    </div>
+    <div id="result">
+
+    </div>
+    <div class="gameScr keys">
+
+    </div>
+</body>
+</html>
+
+<!-- Credit for icon goes to: <a href="https://www.flaticon.com/free-icons/keyboard" title="keyboard icons">Keyboard icons created by Freepik - Flaticon</a> -->
